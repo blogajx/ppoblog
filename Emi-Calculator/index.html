@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EMI Calculator | Pixel Radar Online</title>
+        <link rel="canonical" href="index.html" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="page title here - Pixel Radar Online" />
+        <meta property="og:url" content="https://pixelradar.online/" />
+        <meta property="og:site_name" content="Pixel Radar Online" />
+        <meta property="article:publisher" content="https://www.facebook.com/PixelRadarOnline" />
+        <meta property="article:modified_time" content="2025-05-19T09:24:31+00:00" />
+        <meta property="og:image" content="https://pixelradar.online/wp-content/uploads/2025/05/Pixel-Radar-Online-1.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json" class="yoast-schema-graph">
+
+        </script>
+        <link rel='stylesheet' id='aj-square-root-style-css' href='/wp-content/themes/aj-square/style.css?ver=1.0.0' type='text/css' media='all' />
+        <link rel='stylesheet' id='aj-square-style-css' href='/wp-content/themes/aj-square/assets/css/style.css?ver=1.0.0' type='text/css' media='all' />
+        <link rel='stylesheet' id='bootstrap-css-css' href='/wp-content/themes/aj-square/assets/css/bootstrap.min.css?ver=4.6.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css' href='/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min1e39.css?ver=6.4.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='bootstrap-icons-css' href='/wp-content/themes/aj-square/assets/bootstrap-icons/bootstrap-icons95a1.css?ver=1.10.5' type='text/css' media='all' />
+        <link rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css2?family=Roboto%3Awght%40400%3B500%3B700&amp;display=swap&amp;ver=6.8.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='google-fonts-2-css' href='https://fonts.googleapis.com/css2?family=Roboto%3Aital%2Cwght%400%2C100..900%3B1%2C100..900&amp;display=swap&amp;ver=6.8.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='dashicons-css' href='wp-includes/css/dashicons.min6c2d.css?ver=6.8.2' type='text/css' media='all' />
+        <script type="text/javascript" src="wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
+        <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+        <!-- Google tag (gtag.js) snippet added by Site Kit -->
+        <!-- Google Analytics snippet added by Site Kit -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="/wp-content/uploads/2025/05/cropped-favicon-1-32x32.png" sizes="32x32" />
+        <link rel="icon" href="/wp-content/uploads/2025/05/cropped-favicon-1-192x192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/wp-content/uploads/2025/05/cropped-favicon-1-180x180.png" />
+        <meta name="msapplication-TileImage" content="https://pixelradar.online/wp-content/uploads/2025/05/cropped-favicon-1-270x270.png" />
+  </head>
+  <body>
+    <!--button-->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+            <!--button-->
+        <header class="container-fluid  sticky-top" id="main-header">
+             <div id="navbar-container"></div>
+        </header>
+
+        <div class="container py-5">
+          <h1 class="text-center mb-4">EMI Calculator</h1>
+          <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+            <form id="emiForm">
+              <div class="mb-3">
+                <label for="loanAmount" class="form-label">Loan Amount</label>
+                <input type="number" class="form-control" id="loanAmount" placeholder="Enter loan amount" required>
+              </div>
+              <div class="mb-3">
+                <label for="interestRate" class="form-label">Annual Interest Rate (%)</label>
+                <input type="number" class="form-control" id="interestRate" placeholder="Enter interest rate" step="0.01" required>
+              </div>
+              <div class="mb-3">
+                <label for="loanTenure" class="form-label">Loan Tenure (in months)</label>
+                <input type="number" class="form-control" id="loanTenure" placeholder="Enter tenure in months" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Calculate EMI</button>
+            </form>
+
+            <div class="mt-4" id="result" style="display:none;">
+              <h5 class="text-success">EMI Result:</h5>
+              <p><strong>Monthly EMI:</strong> <span id="monthlyEMI"></span></p>
+              <p><strong>Total Payment:</strong> <span id="totalPayment"></span></p>
+              <p><strong>Total Interest:</strong> <span id="totalInterest"></span></p>
+            </div>
+          </div>
+        </div>
+
+        <!--Footer Section-->
+        <footer class="container-fluid footer-section pt-5 pb-3">
+            <div id="footer-container"></div>
+        </footer>
+        <script type="text/javascript" src="/wp-content/themes/aj-square/assets/js/bootstrap.bundle.min83b6.js?ver=4.6.2" id="bootstrap-js-js"></script>
+        <script type="text/javascript" src="/wp-content/themes/aj-square/assets/js/script.js?ver=1.1.0" id="aj-square-script-js"></script>
+        <script type='text/javascript' src="/footer-script.js"></script>
+        <script type='text/javascript' src="/nav.js"></script>
+
+      <script>
+        document.getElementById("emiForm").addEventListener("submit", function(e) {
+          e.preventDefault();
+          
+          const P = parseFloat(document.getElementById("loanAmount").value);
+          const annualRate = parseFloat(document.getElementById("interestRate").value);
+          const months = parseInt(document.getElementById("loanTenure").value);
+
+          const R = (annualRate / 12) / 100; // monthly interest
+          const EMI = (P * R * Math.pow(1 + R, months)) / (Math.pow(1 + R, months) - 1);
+          const totalPayment = EMI * months;
+          const totalInterest = totalPayment - P;
+
+          document.getElementById("monthlyEMI").textContent = EMI.toFixed(2);
+          document.getElementById("totalPayment").textContent = totalPayment.toFixed(2);
+          document.getElementById("totalInterest").textContent = totalInterest.toFixed(2);
+
+          document.getElementById("result").style.display = "block";
+        });
+      </script>
+  </body>
+</html>

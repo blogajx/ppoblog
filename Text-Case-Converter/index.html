@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Case Converter | Pixel Radar Online</title>
+        <link rel="canonical" href="index.html" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="page title here - Pixel Radar Online" />
+        <meta property="og:url" content="https://pixelradar.online/" />
+        <meta property="og:site_name" content="Pixel Radar Online" />
+        <meta property="article:publisher" content="https://www.facebook.com/PixelRadarOnline" />
+        <meta property="article:modified_time" content="2025-05-19T09:24:31+00:00" />
+        <meta property="og:image" content="https://pixelradar.online/wp-content/uploads/2025/05/Pixel-Radar-Online-1.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <script type="application/ld+json" class="yoast-schema-graph">
+
+        </script>
+        <link rel='stylesheet' id='aj-square-root-style-css' href='/wp-content/themes/aj-square/style.css?ver=1.0.0' type='text/css' media='all' />
+        <link rel='stylesheet' id='aj-square-style-css' href='/wp-content/themes/aj-square/assets/css/style.css?ver=1.0.0' type='text/css' media='all' />
+        <link rel='stylesheet' id='bootstrap-css-css' href='/wp-content/themes/aj-square/assets/css/bootstrap.min.css?ver=4.6.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='font-awesome-css' href='/cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min1e39.css?ver=6.4.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='bootstrap-icons-css' href='/wp-content/themes/aj-square/assets/bootstrap-icons/bootstrap-icons95a1.css?ver=1.10.5' type='text/css' media='all' />
+        <link rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css2?family=Roboto%3Awght%40400%3B500%3B700&amp;display=swap&amp;ver=6.8.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='google-fonts-2-css' href='https://fonts.googleapis.com/css2?family=Roboto%3Aital%2Cwght%400%2C100..900%3B1%2C100..900&amp;display=swap&amp;ver=6.8.2' type='text/css' media='all' />
+        <link rel='stylesheet' id='dashicons-css' href='wp-includes/css/dashicons.min6c2d.css?ver=6.8.2' type='text/css' media='all' />
+        <script type="text/javascript" src="wp-includes/js/jquery/jquery.minf43b.js?ver=3.7.1" id="jquery-core-js"></script>
+        <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" id="jquery-migrate-js"></script>
+
+        <!-- Google tag (gtag.js) snippet added by Site Kit -->
+        <!-- Google Analytics snippet added by Site Kit -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="/wp-content/uploads/2025/05/cropped-favicon-1-32x32.png" sizes="32x32" />
+        <link rel="icon" href="/wp-content/uploads/2025/05/cropped-favicon-1-192x192.png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/wp-content/uploads/2025/05/cropped-favicon-1-180x180.png" />
+        <meta name="msapplication-TileImage" content="https://pixelradar.online/wp-content/uploads/2025/05/cropped-favicon-1-270x270.png" />
+            <!-- Google Tag Manager -->
+          <!-- End Google Tag Manager -->
+        <style>
+          body {
+            background: #f8f9fa;
+          }
+          .tool-card {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 2rem;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+          }
+          textarea {
+            resize: none;
+            min-height: 150px;
+          }
+        </style>
+    </head>
+    <body>
+
+        <!-- Header -->
+       <header class="container-fluid  sticky-top" id="main-header">
+             <div id="navbar-container"></div>
+        </header>
+        <!-- Converter Tool -->
+        <section class="container my-5">
+          <div class="tool-card">
+            <h2 class="text-center mb-4">Convert Text Case ✍️</h2>
+
+            <!-- Input -->
+            <div class="mb-3">
+              <label for="inputText" class="form-label">Enter your text:</label>
+              <textarea id="inputText" class="form-control" placeholder="Paste or type text here..."></textarea>
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <button type="button" class="btn btn-primary" onclick="convertText('upper')">UPPERCASE</button>
+              <button type="button" class="btn btn-secondary" onclick="convertText('lower')">lowercase</button>
+              <button type="button" class="btn btn-success" onclick="convertText('title')">Title Case</button>
+              <button type="button" class="btn btn-warning" onclick="convertText('sentence')">Sentence case</button>
+              <button type="button" class="btn btn-info" onclick="convertText('capitalize')">Capitalize Each Word</button>
+              <button type="button" class="btn btn-dark" onclick="clearText()">Clear</button>
+            </div>
+
+            <!-- Output -->
+            <div class="mb-3">
+              <label for="outputText" class="form-label">Converted text:</label>
+              <textarea id="outputText" class="form-control" readonly></textarea>
+            </div>
+
+            <!-- Copy button -->
+            <div class="text-end">
+              <button type="button" class="btn btn-outline-primary" onclick="copyText()">📋 Copy to Clipboard</button>
+            </div>
+          </div>
+        </section>
+
+        <!--Footer Section-->
+        <footer class="container-fluid footer-section pt-5 pb-3">
+            <div id="footer-container"></div>
+        </footer>
+
+    <script>
+      function convertText(type) {
+        const input = document.getElementById("inputText").value;
+        let result = "";
+
+        switch(type) {
+          case "upper":
+            result = input.toUpperCase();
+            break;
+          case "lower":
+            result = input.toLowerCase();
+            break;
+          case "title":
+            result = input.toLowerCase().split(" ").map(word => 
+              word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(" ");
+            break;
+          case "sentence":
+            result = input.charAt(0).toUpperCase() + input.slice(1).toLowerCase();
+            break;
+          case "capitalize":
+            result = input.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+            break;
+        }
+
+        document.getElementById("outputText").value = result;
+      }
+
+      function clearText() {
+        document.getElementById("inputText").value = "";
+        document.getElementById("outputText").value = "";
+      }
+
+      function copyText() {
+        const output = document.getElementById("outputText");
+        output.select();
+        output.setSelectionRange(0, 99999); // For mobile
+        document.execCommand("copy");
+        alert("Converted text copied!");
+      }
+    </script>
+    <script type="text/javascript" src="wp-content/themes/aj-square/assets/js/bootstrap.bundle.min83b6.js?ver=4.6.2" id="bootstrap-js-js"></script>
+    <script type="text/javascript" src="wp-content/themes/aj-square/assets/js/script.js?ver=1.1.0" id="aj-square-script-js"></script>    
+    <script src="/footer-script.js"></script>
+    <script src="/nav.js"></script>
+  </body>
+</html>

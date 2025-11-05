@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Text Summarizer | Pixel Radar Online</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { background: #f8f9fa; }
+  .tool-container { max-width: 800px; margin: 50px auto; }
+  textarea { resize: none; }
+  .btn-primary { background: #007bff; border: none; }
+  .summary-output { min-height: 150px; background: #fff; padding: 15px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+</style>
+</head>
+<body>
+
+<div class="container tool-container">
+  <h1 class="text-center mb-4">AI Text Summarizer</h1>
+  <p class="text-center mb-4">Quickly summarize large texts using AI.</p>
+
+  <div class="mb-3">
+    <label for="inputText" class="form-label">Enter your text:</label>
+    <textarea id="inputText" class="form-control" rows="8" placeholder="Paste or type your text here..."></textarea>
+  </div>
+
+  <div class="text-center mb-3">
+    <button id="summarizeBtn" class="btn btn-primary">Summarize</button>
+  </div>
+
+  <h5>Summary:</h5>
+  <div id="summaryOutput" class="summary-output"></div>
+</div>
+
+<script>
+  const summarizeBtn = document.getElementById("summarizeBtn");
+  const inputText = document.getElementById("inputText");
+  const summaryOutput = document.getElementById("summaryOutput");
+
+  summarizeBtn.addEventListener("click", () => {
+    const text = inputText.value.trim();
+    if (!text) {
+      alert("Please enter some text to summarize.");
+      return;
+    }
+
+    // Placeholder logic: take first 3 sentences as summary
+    const sentences = text.split('.').filter(s => s.trim() !== '');
+    const summary = sentences.slice(0, 3).join('. ') + (sentences.length > 3 ? '...' : '');
+    summaryOutput.textContent = summary;
+  });
+</script>
+
+</body>
+</html>

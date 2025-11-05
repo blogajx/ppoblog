@@ -1,0 +1,29 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Force HTTPS (optional, recommended)
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Handle subdomain to folder mapping
+# If the request is for blog.pixelradar.online, serve content from /blog folder
+RewriteCond %{HTTP_HOST} ^blog\.pixelradar\.online$ [NC]
+RewriteCond %{REQUEST_URI} !^/blog/
+RewriteRule ^(.*)$ /blog/$1 [L]
+
+# Redirect www to non-www for subdomain (optional)
+RewriteCond %{HTTP_HOST} ^www\.blog\.pixelradar\.online$ [NC]
+RewriteRule ^(.*)$ https://blog.pixelradar.online/$1 [L,R=301]
+
+# General WordPress rules (if WordPress is installed in subdomain folder)
+<IfModule mod_rewrite.c>
+RewriteBase /blog/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /blog/index.php [L]
+</IfModule>
+
+# Optional: Custom error pages
+ErrorDocument 404 /blog/404.html
+ErrorDocument 403 /blog/403.html

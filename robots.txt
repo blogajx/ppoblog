@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /
+
+Sitemap: https://pixelradar.online/sitemap.xml
+Sitemap: https://pixelradar.online/sitemap.rss
+Sitemap: https://pixelradar.online/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK
