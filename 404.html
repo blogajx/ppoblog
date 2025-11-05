@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Page Not Found</title>
+  <script>
+    const path = window.location.pathname;
+
+    // Redirect /blog paths
+    if (path.startsWith("/blog")) {
+      window.location.href = "https://blog.pixelradar.online" + path.replace("/blog", "");
+    }
+
+    // Add more redirects if needed
+    // else if (path.startsWith("/tools")) { ... }
+  </script>
+</head>
+<body>
+  <h1>404 - Page Not Found</h1>
+  <p>If you are not redirected automatically, <a href="/">go back home</a>.</p>
+</body>
+</html>
